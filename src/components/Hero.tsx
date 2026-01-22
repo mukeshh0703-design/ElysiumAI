@@ -54,14 +54,19 @@ export default function Hero() {
             </a>
 
             {/* SECONDARY CTA */}
-            <button className="group relative px-8 py-4 bg-white/5 backdrop-blur-md text-white
-                               rounded-xl font-semibold text-lg
-                               border border-white/10 hover:bg-white/10
-                               transition-all duration-300 hover:scale-105
-                               flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/elysium.ai_?igsh=c3A4Ymp5emZ2ZjFk&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-8 py-4 bg-white/5 backdrop-blur-md text-white
+                         rounded-xl font-semibold text-lg
+                         border border-white/10 hover:bg-white/10
+                         transition-all duration-300 hover:scale-105
+                         flex items-center gap-3"
+            >
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               See How It Works
-            </button>
+            </a>
           </div>
 
           <div className="pt-16 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
