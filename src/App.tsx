@@ -1,0 +1,31 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import Industries from './components/Industries';
+import HowItWorks from './components/HowItWorks';
+import WhyChooseUs from './components/WhyChooseUs';
+import TechStack from './components/TechStack';
+import CTA from './components/CTA';
+import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat'; // ✅ STEP 2 IMPORT
+
+function App() {
+  return (
+    <div className="w-full overflow-x-hidden bg-slate-950">
+      <Navbar />
+      <Hero />
+      <Features />
+      <Industries />
+      <HowItWorks />
+      <WhyChooseUs />
+      <TechStack />
+      <CTA />
+      <Footer />
+
+      {/* ✅ Floating Call & WhatsApp Buttons */}
+      <WhatsAppFloat />
+    </div>
+  );
+}
+
+export default App;
