@@ -50,23 +50,32 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
-          {/* LOGO */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+          {/* MOBILE MENU TOGGLE - Left side on mobile */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-white p-2 -ml-2"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+
+          {/* LOGO - Center on mobile, left on desktop */}
           <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className="
-              flex items-center gap-3 hover:opacity-80 transition-opacity
-              absolute left-[46%] top-[48%] -translate-x-1/2 -translate-y-1/2
-              md:static md:translate-x-0 md:translate-y-0
-            "
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity md:mr-auto"
           >
             <img
               src="/elysium_ai_logo.png"
               alt="Elysium AI Logo"
-              className="w-20 h-20 md:w-16 md:h-16 object-contain"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
             />
-            <span className="text-xl font-bold text-white hidden sm:block">
+            <span className="text-lg md:text-xl font-bold text-white hidden sm:block">
               Elysium AI
             </span>
           </button>
@@ -90,7 +99,7 @@ export default function Navbar() {
               href={CALENDLY_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white
+              className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white
                          rounded-lg font-semibold text-sm
                          shadow-[0_0_20px_rgba(59,130,246,0.4)]
                          hover:shadow-[0_0_30px_rgba(59,130,246,0.6)]
@@ -100,18 +109,8 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* MOBILE MENU TOGGLE */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          {/* Spacer for mobile to balance the layout */}
+          <div className="w-10 md:hidden"></div>
         </div>
 
         {/* MOBILE MENU */}
@@ -133,7 +132,7 @@ export default function Navbar() {
                 href={CALENDLY_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white
+                className="mt-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white
                            rounded-lg font-semibold text-sm
                            shadow-[0_0_20px_rgba(59,130,246,0.4)]
                            hover:shadow-[0_0_30px_rgba(59,130,246,0.6)]
