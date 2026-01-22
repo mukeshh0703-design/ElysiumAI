@@ -51,31 +51,18 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-          {/* MOBILE MENU TOGGLE - Left side on mobile */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 -ml-2"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-
-          {/* LOGO - Center on mobile, left on desktop */}
+          {/* LOGO - Left side on all screens */}
           <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity md:mr-auto"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <img
               src="/elysium_ai_logo.png"
               alt="Elysium AI Logo"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              className="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 object-contain"
             />
-            <span className="text-lg md:text-xl font-bold text-white hidden sm:block">
+            <span className="text-xl font-bold text-white hidden sm:block">
               Elysium AI
             </span>
           </button>
@@ -109,8 +96,18 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Spacer for mobile to balance the layout */}
-          <div className="w-10 md:hidden"></div>
+          {/* MOBILE MENU TOGGLE - Right side on mobile */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-white p-2"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
         {/* MOBILE MENU */}
