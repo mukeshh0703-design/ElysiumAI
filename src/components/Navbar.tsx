@@ -62,7 +62,7 @@ export default function Navbar() {
               alt="Elysium AI Logo"
               className="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 object-contain"
             />
-            <span className="text-xl font-bold text-white hidden sm:block">
+            <span className="text-xl font-bold text-white">
               Elysium AI
             </span>
           </button>
